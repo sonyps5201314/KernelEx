@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KernelEx", "KernelEx\KernelEx.vcxproj", "{4ACC67C4-B23C-436F-9E2E-13063FF5A421}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4ACC67C4-B23C-436F-9E2E-13063FF5A421}.Debug|x64.ActiveCfg = Debug|x64
+		{4ACC67C4-B23C-436F-9E2E-13063FF5A421}.Debug|x64.Build.0 = Debug|x64
+		{4ACC67C4-B23C-436F-9E2E-13063FF5A421}.Debug|x86.ActiveCfg = Debug|Win32
+		{4ACC67C4-B23C-436F-9E2E-13063FF5A421}.Debug|x86.Build.0 = Debug|Win32
+		{4ACC67C4-B23C-436F-9E2E-13063FF5A421}.Release|x64.ActiveCfg = Release|x64
+		{4ACC67C4-B23C-436F-9E2E-13063FF5A421}.Release|x64.Build.0 = Release|x64
+		{4ACC67C4-B23C-436F-9E2E-13063FF5A421}.Release|x86.ActiveCfg = Release|Win32
+		{4ACC67C4-B23C-436F-9E2E-13063FF5A421}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7455B7B8-A6E2-4623-BA8C-6ACD6DD3C4A0}
+	EndGlobalSection
+EndGlobal
