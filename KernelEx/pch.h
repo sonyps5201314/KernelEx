@@ -7,7 +7,49 @@
 #ifndef PCH_H
 #define PCH_H
 
+#define _CRT_SECURE_NO_WARNINGS
+
+#define _KERNEL32_
+#define _ADVAPI32_
+
+#define _ATL_XP_TARGETING
+
 // 添加要在此处预编译的标头
 #include "framework.h"
+#include <Wct.h>
+
+//JKSDK
+#define __DO_NOT_USE_JKSDK_OUTPUTDEBUGSTRING__
+#define __DO_NOT_USE_JKSDK_TRACE__
+#define __DO_NOT_USE_JKSDK_ASSERT__
+#define __DO_NOT_USE_COM__
+//#define __DO_NOT_USE_ATL_CSTRING__
+#define __DO_NOT_USE_JKSDK_CDLG__
+#define __DO_NOT_USE_JKSDK_AUTOLOCK__
+#define __DO_NOT_USE_JKSDK_SHOWCALLSTACKTRACK_SOURCEFILEPATHMAPPINGS__
+#include "F:\MyCppProjects\JKSDK\Lib\JKSDK.H"
+
+//ntdll.h++
+//wine
+#define TRACE ATLTRACE
+#define WARN ATLTRACE
+#define FIXME ATLTRACE
+
+#define sprintfW wsprintfW
+#define strlenW wcslen
+#define strcatW wcscat
+#define strncmpiW _wcsnicmp
+
+#if defined(__GNUC__) && ((__GNUC__ > 4) || ((__GNUC__ == 4) && (__GNUC_MINOR__ >= 3)))
+#define __WINE_ALLOC_SIZE(x) __attribute__((__alloc_size__(x)))
+#else
+#define __WINE_ALLOC_SIZE(x)
+#endif
+
+EXTERN_C const char* debugstr_an(const char* s, int n);
+EXTERN_C const char* debugstr_wn(const WCHAR* s, int n);
+
+EXTERN_C const char* debugstr_a(const char* s);
+EXTERN_C const char* debugstr_w(const WCHAR* s);
 
 #endif //PCH_H
