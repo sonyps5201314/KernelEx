@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{4acc67c4-b23c-436f-9e2e-13063ff5a421}</ProjectGuid>
-    <RootNamespace>KernelBase</RootNamespace>
+    <ProjectGuid>{1ba25d89-c084-44c4-bd98-9589cd1f761e}</ProjectGuid>
+    <RootNamespace>NtdllEx</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -31,7 +31,6 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
-    <UseOfMfc>Static</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -39,14 +38,12 @@
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
-    <UseOfMfc>Static</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
-    <UseOfMfc>Static</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -54,7 +51,6 @@
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
-    <UseOfMfc>Static</UseOfMfc>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -84,21 +80,20 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;KERNELBASE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;NTDLLEX_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <StringPooling>true</StringPooling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <ModuleDefinitionFile>Source.def</ModuleDefinitionFile>
-      <AdditionalDependencies>M:\Open_Code\YY-Thunks\objs\x86\YY_Thunks_for_Win2K3.obj;%(AdditionalDependencies)</AdditionalDependencies>
-      <DelayLoadDLLs>USER32.DLL;GDI32.DLL;ADVAPI32.DLL;SHELL32.DLL;ole32.DLL;OLEAUT32.DLL;SHLWAPI.DLL;WS2_32.DLL;VERSION.DLL;PSAPI.DLL;SETUPAPI.DLL;dbghelp.DLL;ESENT.DLL;IPHLPAPI.DLL;pdh.DLL;UxTheme.DLL;WINHTTP.DLL;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <AdditionalDependencies>M:\Open_Code\YY-Thunks-ntdll\objs\x86\YY_Thunks_for_Win2K3.obj;%(AdditionalDependencies)</AdditionalDependencies>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
     </Link>
@@ -109,7 +104,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;KERNELBASE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;NTDLLEX_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
@@ -120,29 +115,26 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <ModuleDefinitionFile>Source.def</ModuleDefinitionFile>
-      <AdditionalDependencies>M:\Open_Code\YY-Thunks\objs\x86\YY_Thunks_for_Win2K3.obj;%(AdditionalDependencies)</AdditionalDependencies>
-      <DelayLoadDLLs>USER32.DLL;GDI32.DLL;ADVAPI32.DLL;SHELL32.DLL;ole32.DLL;OLEAUT32.DLL;SHLWAPI.DLL;WS2_32.DLL;VERSION.DLL;PSAPI.DLL;SETUPAPI.DLL;dbghelp.DLL;ESENT.DLL;IPHLPAPI.DLL;pdh.DLL;UxTheme.DLL;WINHTTP.DLL;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <AdditionalDependencies>M:\Open_Code\YY-Thunks-ntdll\objs\x86\YY_Thunks_for_Win2K3.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;KERNELBASE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;NTDLLEX_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <StringPooling>true</StringPooling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <ModuleDefinitionFile>Source.def</ModuleDefinitionFile>
-      <DelayLoadDLLs>USER32.DLL;GDI32.DLL;ADVAPI32.DLL;SHELL32.DLL;ole32.DLL;OLEAUT32.DLL;SHLWAPI.DLL;WS2_32.DLL;VERSION.DLL;PSAPI.DLL;SETUPAPI.DLL;dbghelp.DLL;ESENT.DLL;IPHLPAPI.DLL;pdh.DLL;UxTheme.DLL;WINHTTP.DLL;%(DelayLoadDLLs)</DelayLoadDLLs>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
     </Link>
@@ -153,7 +145,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;KERNELBASE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;NTDLLEX_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
@@ -164,12 +156,9 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <ModuleDefinitionFile>Source.def</ModuleDefinitionFile>
-      <DelayLoadDLLs>USER32.DLL;GDI32.DLL;ADVAPI32.DLL;SHELL32.DLL;ole32.DLL;OLEAUT32.DLL;SHLWAPI.DLL;WS2_32.DLL;VERSION.DLL;PSAPI.DLL;SETUPAPI.DLL;dbghelp.DLL;ESENT.DLL;IPHLPAPI.DLL;pdh.DLL;UxTheme.DLL;WINHTTP.DLL;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Exports.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
@@ -181,9 +170,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Source.def" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -6,6 +6,11 @@
 
 //JKSDK
 #include "F:\MyCppProjects\JKSDK\Lib\JKSDK.CPP"
+#ifdef _M_IX86
+#pragma comment(lib,"F:\\MyCppProjects\\JKSDK\\Lib\\JKSDK_ASM_LIB.lib")
+#elif defined(_M_AMD64)
+#pragma comment(lib,"F:\\MyCppProjects\\JKSDK\\Lib\\x64\\JKSDK_ASM_LIB.lib")
+#endif
 
 CAutoCritSec g_CS_for_debugstr_an;
 CAutoCritSec g_CS_for_debugstr_wn;
