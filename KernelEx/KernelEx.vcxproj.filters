@@ -32,6 +32,12 @@
     <ClCompile Include="pch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="M:\Open_Code\YY-Thunks\src\Thunks\YY_Thunks.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="M:\Open_Code\YY-Thunks\src\YY-Thunks.UnitTest\weak.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Source.def">

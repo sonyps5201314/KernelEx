@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KernelEx", "KernelEx\KernelEx.vcxproj", "{4ACC67C4-B23C-436F-9E2E-13063FF5A421}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1BA25D89-C084-44C4-BD98-9589CD1F761E} = {1BA25D89-C084-44C4-BD98-9589CD1F761E}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NtdllEx", "NtdllEx\NtdllEx.vcxproj", "{1BA25D89-C084-44C4-BD98-9589CD1F761E}"
 EndProject

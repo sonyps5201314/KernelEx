@@ -21,6 +21,8 @@
 
 #include <Wct.h>
 
+#pragma comment(lib, "ntdll.lib")
+
 //JKSDK
 #define __DO_NOT_USE_JKSDK_OUTPUTDEBUGSTRING__
 #define __DO_NOT_USE_JKSDK_TRACE__

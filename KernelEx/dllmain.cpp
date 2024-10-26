@@ -4,7 +4,7 @@
 
 #pragma comment(linker, "/ENTRY:DllMainCRTStartupForYY_Thunks")
 
-EXTERN_C const BOOL __YY_Thunks_Disable_Rreload_Dlls = TRUE;
+EXTERN_C const void* __YY_Thunks_Disable_Rreload_Dlls = (const void*)TRUE;
 
 // 直接通过GetModuleHandleW获取，改选项非常危险，如果dll尚未加载会将不会加载！！！
 #define USING_GET_MODULE_HANDLE 0x00000001
